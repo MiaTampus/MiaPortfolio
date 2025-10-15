@@ -1,0 +1,231 @@
+
+
+body {
+  background-image: url('darkbackground.jpg'); /* Default */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+}
+
+/* Light mode */
+body.light-mode {
+  color: black;
+  background-image: url('lightbackground.png');
+}
+
+/* Toggle button styling */
+#modeToggle {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 8px 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Button color change in light mode */
+body.light-mode #modeToggle {
+  color: black;
+  border: 2px solid black;
+}
+
+#modeToggle:hover {
+  background-color: #8b5cf6;
+  color: white;
+  border-color: #8b5cf6;
+}
+
+
+
+.photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    border: 3px solid white;
+}
+
+
+.extra-content {
+  padding: 40px;
+  text-align: center;
+  min-height: 150vh;
+  }
+
+.name h1 {
+    color: rgb(241, 239, 239);
+    margin-top: 20px;
+}
+
+.about h2 {
+    color: rgba(237, 239, 239, 0.87);
+    margin-top: 5px;
+
+}
+
+.sentence h3{
+    color: rgb(255, 249, 249);
+    margin-top: 5px;
+
+}
+nav {
+ 
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: rgb(249, 243, 243);
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: normal;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+  background-color: rgb(246, 239, 239);
+  font-weight: bold;
+}
+
+/* Contact me*/
+
+.contact-form {
+  width: 320px;       
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.contact-form h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  text-align: left;   
+}
+
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;         
+  max-width: 100%;     
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 2px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #8b5cf6;
+}
+
+
+.contact-form button {
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 10px;
+  width: 100%;          
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+/*portfolio*/
+
+nav a {
+  font-size: 16px;
+}
+
+
+.Introduction h1 {
+  font-size: 24px;
+}
+
+.Introduction pre {
+  font-size: 16px;
+}
+
+
+.skills h1 {
+  font-size: 24px;
+}
+
+.skills h5 {
+  font-size: 16px;
+}
+
+
+.experience h2 {
+  font-size: 24px;
+}
+
+.job h3 {
+  font-size: 20px;
+}
+
+.job p {
+  font-size: 16px;
+}
+
+.job pre {
+  font-size: 16px;
+}
+
+.job ul {
+  font-size: 16px;
+}
+
+#modeToggle {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 8px 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+#modeToggle:hover {
+  background-color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
