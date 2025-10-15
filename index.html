@@ -5,14 +5,18 @@
   <title>Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+
   <nav>
     <a href="index.html">Home</a> |
     <a href="aboutme.html">About Me</a> 
     <a href = "portfolio.html">Portfolio</a>
     <a href="contact.html">Contact</a>
+   <button onclick="toggleMode()" id="modeToggle">Switch to Light Mode</button>
 
-   
+
     
   </nav>
   <div class = "main content">
@@ -49,6 +53,36 @@ Check out my skills, and what I'm currently learning.</i></b></h3>
       <p></p>
       <p></p>
     </div>
+<script>
+    function applyMode(mode) {
+      const body = document.body;
+      const button = document.getElementById('modeToggle');
 
+      if (mode === 'light') {
+        body.classList.add('light-mode');
+        body.style.backgroundImage = "url('lightbackground.jpg')";
+        button.textContent = "Switch to Dark Mode";
+      } else {
+        body.classList.remove('light-mode');
+        body.style.backgroundImage = "url('darkbackground.jpg')";
+        button.textContent = "Switch to Light Mode";
+      }
+    }
+
+    function toggleMode() {
+      const currentMode = localStorage.getItem('mode') === 'light' ? 'dark' : 'light';
+      localStorage.setItem('mode', currentMode);
+      applyMode(currentMode);
+    }
+
+    // Apply saved mode on page load
+    window.onload = function () {
+      const savedMode = localStorage.getItem('mode') || 'dark';
+      applyMode(savedMode);
+    };
+  </script>
 </body>
 </html>
+
+
+
