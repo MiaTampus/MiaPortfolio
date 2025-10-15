@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> About Me</title>
+        <title> Portfolio</title>
+       
+
         <body>
+
             <meta charset="UTF-8">
             <link rel="stylesheet" href="style.css">
             
@@ -11,6 +14,8 @@
                 <a href = "aboutme.html">About me</a>
                 <a href = "portfolio.html">Portfolio </a>
                 <a href="contact.html"> Contact</a>
+                <button onclick="toggleMode()" id="modeToggle">Switch to Light Mode</button>
+
 
             </nav>
             <div class = "Introduction">
@@ -46,8 +51,34 @@
     </ul>
   </div>
 </div>
+<script>
+    function applyMode(mode) {
+      const body = document.body;
+      const button = document.getElementById('modeToggle');
 
+      if (mode === 'light') {
+        body.classList.add('light-mode');
+        body.style.backgroundImage = "url('lightbackground.jpg')";
+        button.textContent = "Switch to Dark Mode";
+      } else {
+        body.classList.remove('light-mode');
+        body.style.backgroundImage = "url('darkbackground.jpg')";
+        button.textContent = "Switch to Light Mode";
+      }
+    }
+
+    function toggleMode() {
+      const currentMode = localStorage.getItem('mode') === 'light' ? 'dark' : 'light';
+      localStorage.setItem('mode', currentMode);
+      applyMode(currentMode);
+    }
+
+    // Apply saved mode on page load
+    window.onload = function () {
+      const savedMode = localStorage.getItem('mode') || 'dark';
+      applyMode(savedMode);
+    };
+  </script>
 
         </body>
-    </head>
 </html>
