@@ -6,12 +6,19 @@
   <title>Contact Form</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
+
+
     <nav>
     <a href="index.html">Home</a> |
     <a href="aboutme.html">About Me</a> 
     <a href = "portfolio.html">Portfolio</a>
     <a href="contact.html">Contact</a>    
+    <button onclick="toggleMode()" id="modeToggle">Switch to Light Mode</button>
+
+ 
   </nav>
     
   <div class="contact-form">
@@ -29,6 +36,43 @@
       <button type="submit">SEND</button>
     </form>
   </div>
+
+<script>
+  // Run when page loads
+  window.onload = function () {
+    const savedMode = localStorage.getItem('mode') || 'dark';
+    const body = document.body;
+    const button = document.getElementById('modeToggle');
+
+    if (savedMode === 'light') {
+      body.classList.add('light-mode');
+      body.style.backgroundImage = "url('lightbackground.jpg')";
+      button.textContent = "Switch to Dark Mode";
+    } else {
+      body.classList.remove('light-mode');
+      body.style.backgroundImage = "url('darkbackground.jpg')";
+      button.textContent = "Switch to Light Mode";
+    }
+  };
+
+  // Toggle function
+  function toggleMode() {
+    const body = document.body;
+    const button = document.getElementById('modeToggle');
+    const isLight = body.classList.toggle('light-mode');
+
+    if (isLight) {
+      body.style.backgroundImage = "url('lightbackground.png')";
+      localStorage.setItem('mode', 'light');
+      button.textContent = "Switch to Dark Mode";
+    } else {
+      body.style.backgroundImage = "url('darkbackground.jpg')";
+      localStorage.setItem('mode', 'dark');
+      button.textContent = "Switch to Light Mode";
+    }
+  }
+</script>
+
 </body>
 </html>
 
