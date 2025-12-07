@@ -5,18 +5,15 @@
   <title>Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-
   <nav>
     <a href="index.html">Home</a> |
     <a href="aboutme.html">About Me</a> 
     <a href = "portfolio.html">Portfolio</a>
     <a href="contact.html">Contact</a>
-   <button onclick="toggleMode()" id="modeToggle">Switch to Light Mode</button>
+     
 
-
+   
     
   </nav>
   <div class = "main content">
@@ -31,16 +28,16 @@
     </div>
 
     <div class="name">
-        <h1><b><i>MIA FLOR TAMPUS</b></i></h1>
+        <h1><b>MIA FLOR TAMPUS</b></h1>
         <br>
     </div>
 
     <div class="about">
-        <h2><b><i>A 2nd Year IT Student & Future Web Developer</i></b></h2>
+        <h2><b>A 2nd Year IT Student & Future Web Developer</b></h2>
     </div>
     <div class = "sentence">
-    <h3><b><i>I’m passionate about building websites and learning modern web technologies.
-Check out my skills, and what I'm currently learning.</i></b></h3>
+    <h3><b>I’m passionate about building websites and learning modern web technologies.
+Check out my skills, and what I'm currently learning.</b></h3>
 
     </div>
     <!-- Extra content to make the page scrollable -->
@@ -53,33 +50,10 @@ Check out my skills, and what I'm currently learning.</i></b></h3>
       <p></p>
       <p></p>
     </div>
-<script>
-    function applyMode(mode) {
-      const body = document.body;
-      const button = document.getElementById('modeToggle');
+  
+  <script src="script.js"></script>
+  <script src="background.js"></script>
 
-      if (mode === 'light') {
-        body.classList.add('light-mode');
-        body.style.backgroundImage = "url('lightbackground.jpg')";
-        button.textContent = "Switch to Dark Mode";
-      } else {
-        body.classList.remove('light-mode');
-        body.style.backgroundImage = "url('darkbackground.jpg')";
-        button.textContent = "Switch to Light Mode";
-      }
-    }
+  </body>
 
-    function toggleMode() {
-      const currentMode = localStorage.getItem('mode') === 'light' ? 'dark' : 'light';
-      localStorage.setItem('mode', currentMode);
-      applyMode(currentMode);
-    }
-
-    // Apply saved mode on page load
-    window.onload = function () {
-      const savedMode = localStorage.getItem('mode') || 'dark';
-      applyMode(savedMode);
-    };
-  </script>
-</body>
 </html>
