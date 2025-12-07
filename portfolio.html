@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Portfolio</title>
-       
-
+        <title> About Me</title>
         <body>
-
             <meta charset="UTF-8">
             <link rel="stylesheet" href="style.css">
             
@@ -14,22 +11,21 @@
                 <a href = "aboutme.html">About me</a>
                 <a href = "portfolio.html">Portfolio </a>
                 <a href="contact.html"> Contact</a>
-                <button onclick="toggleMode()" id="modeToggle">Switch to Light Mode</button>
-
+                 
 
             </nav>
             <div class = "Introduction">
                 <h1><b> Introduction: </b></h1>
-                <pre><i>Hi! I'm Mia Flor Tampus, a 2nd year IT student passionate about building websites and learning modern web technologies.
-                     I'm currently learning HTML, CSS, and working on small projects to build my skills.</i></pre>
+                <pre>Hi! I'm Mia Flor Tampus, a 2nd year IT student passionate about building websites and learning modern web technologies.
+                     I'm currently learning HTML, CSS, and working on small projects to build my skills.</pre>
               </div>
 
               <div class = "skills">
              <h1><b>Skills</b></h1>
-             <h5><i>✅ Css and Html</i></h5>
-             <h5><i>✅ Basic UI/UX Design</i></h5>
-             <h5><i>✅ Active Listening</i></h5>
-             <h5><i>✅ Time Management</i></h5>
+             <h5> Css and Html</h5>
+             <h5> Basic UI/UX Design</h5>
+             <h5> Active Listening</h5>
+             <h5> Time Management</h5>
             </div>
             <div class="experience">
   <h2>Experience</h2>
@@ -51,34 +47,10 @@
     </ul>
   </div>
 </div>
-<script>
-    function applyMode(mode) {
-      const body = document.body;
-      const button = document.getElementById('modeToggle');
+    <script src="script.js"></script>
+    <script src="background.js"></script>
 
-      if (mode === 'light') {
-        body.classList.add('light-mode');
-        body.style.backgroundImage = "url('lightbackground.jpg')";
-        button.textContent = "Switch to Dark Mode";
-      } else {
-        body.classList.remove('light-mode');
-        body.style.backgroundImage = "url('darkbackground.jpg')";
-        button.textContent = "Switch to Light Mode";
-      }
-    }
-
-    function toggleMode() {
-      const currentMode = localStorage.getItem('mode') === 'light' ? 'dark' : 'light';
-      localStorage.setItem('mode', currentMode);
-      applyMode(currentMode);
-    }
-
-    // Apply saved mode on page load
-    window.onload = function () {
-      const savedMode = localStorage.getItem('mode') || 'dark';
-      applyMode(savedMode);
-    };
-  </script>
-
-        </body>
+    </body>
+    
+    </head>
 </html>
