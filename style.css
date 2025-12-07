@@ -1,15 +1,211 @@
-
-
-body {
-  background-image: url('darkbackground.jpg'); /* Default */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  padding-top: 50px;
-  color: white;
+/* =====================
+   IMPORT MONTANA FONT
+===================== */
+@font-face {
+    font-family: 'Montana';
+    src: url('fonts/Montana.ttf') format('truetype');
 }
+
+/* =====================
+   GENERAL STYLING
+===================== */
+body {
+    font-family: 'Montana', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("technology.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* =====================
+   HEADINGS
+===================== */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 15px 0 10px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* =====================
+   NAVIGATION
+===================== */
+nav {
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-family: 'Montana', sans-serif;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: black;
+}
+
+/* =====================
+   PROFILE PHOTO
+===================== */
+.photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+section {
+    padding: 30px 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+    text-align: center;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =====================
+   CONTACT FORM
+===================== */
+.contact-form {
+    width: 350px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 15px;
+}
+
+.contact-form h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-family: 'Montana', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #9f7aea;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-family: 'Montana', sans-serif;
+}
+
+.contact-form button:hover {
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
+}
+
+/* =====================
+   BACK TO TOP BUTTON
+===================== */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    display: none;
+    transition: 0.3s ease;
+    font-family: 'Montana', sans-serif;
+}
+
+.back-to-top:hover {
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
+}
+
+.skills {
+    text-align: center;        /* center all text */
+    margin: 40px 0;            /* spacing from other sections */
+}
+
+.skills h1 {
+    font-size: 36px;           /* big title */
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Montana', sans-serif;
+}
+
+.skills h5 {
+    font-size: 24px;           /* large skill items */
+    margin: 10px 0;            /* spacing between skills */
+    font-family: 'Montana', sans-serif;
+}
+
 
 /* Light mode */
 body.light-mode {
@@ -57,175 +253,3 @@ body.light-mode #modeToggle {
   text-align: center;
   min-height: 150vh;
   }
-
-.name h1 {
-    color: rgb(241, 239, 239);
-    margin-top: 20px;
-}
-
-.about h2 {
-    color: rgba(237, 239, 239, 0.87);
-    margin-top: 5px;
-
-}
-
-.sentence h3{
-    color: rgb(255, 249, 249);
-    margin-top: 5px;
-
-}
-nav {
- 
-  padding: 15px;
-  text-align: center;
-}
-
-nav a {
-  color: rgb(249, 243, 243);
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: normal;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-
-nav a:hover,
-nav a:focus,
-nav a:active {
-  background-color: rgb(246, 239, 239);
-  font-weight: bold;
-}
-
-/* Contact me*/
-
-.contact-form {
-  width: 320px;       
-  margin: 0 auto;
-  text-align: center;
-}
-
-
-.contact-form h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  display: inline-block;
-  padding: 5px 15px;
-  border-radius: 4px;
-  margin-bottom: 20px;
-}
-
-
-.contact-form label {
-  display: block;
-  margin: 10px 0 5px;
-  font-weight: bold;
-  font-size: 1rem;
-  color: white;
-  text-align: left;   
-}
-
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;         
-  max-width: 100%;     
-  padding: 8px;
-  margin-bottom: 15px;
-  border: 2px solid white;
-  background: transparent;
-  color: white;
-  border-radius: 2px;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #8b5cf6;
-}
-
-
-.contact-form button {
-  background: transparent;
-  color: white;
-  font-weight: bold;
-  border: 2px solid white;
-  padding: 10px;
-  width: 100%;          
-  border-radius: 2px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.contact-form button:hover {
-  background: #8b5cf6;
-  border-color: #8b5cf6;
-}
-
-/*portfolio*/
-
-nav a {
-  font-size: 16px;
-}
-
-
-.Introduction h1 {
-  font-size: 24px;
-}
-
-.Introduction pre {
-  font-size: 16px;
-}
-
-
-.skills h1 {
-  font-size: 24px;
-}
-
-.skills h5 {
-  font-size: 16px;
-}
-
-
-.experience h2 {
-  font-size: 24px;
-}
-
-.job h3 {
-  font-size: 20px;
-}
-
-.job p {
-  font-size: 16px;
-}
-
-.job pre {
-  font-size: 16px;
-}
-
-.job ul {
-  font-size: 16px;
-}
-
-#modeToggle {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-  padding: 8px 12px;
-  margin-left: 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-#modeToggle:hover {
-  background-color: #8b5cf6;
-  border-color: #8b5cf6;
-}
-
